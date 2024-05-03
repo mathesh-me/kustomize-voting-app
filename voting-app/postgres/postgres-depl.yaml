@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: postgres-deployment
+  labels:
+    name: postgres-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: postgres-pod
+  template:
+    metadata:
+      labels:
+        name: postgres-pod
+    spec:
+      containers:
+      - name: postgres-container
+        image: postgres:9.4
+        ports:
+        - containerPort: 5432
+        env:
+        - name: POSTGRES_USER
+          valueFrom:
+            secretKeyRef:
+              name: postgres-secret
+              key: postgres-username
+        - name: POSTGRES_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: postgres-secret
+              key: postgres-password
+        - name: POSTGRES_HOST_AUTH_METHOD
+          valueFrom:
+            secretKeyRef:
+              name: postgres-secret
+              key: postgres-host-auth-method
