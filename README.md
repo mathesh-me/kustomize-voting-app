@@ -14,7 +14,7 @@ The Voting App consists of the following components:
 
 ## Architecture Diagram 📊
 
-![Voting App Architecture]()
+![Kustomize Voting App](https://github.com/mathesh-me/kustomize-voting-app/assets/144098846/08795313-8037-48ed-8bd3-adb9255296ce)
 
 ## Prerequisites 📋
 
