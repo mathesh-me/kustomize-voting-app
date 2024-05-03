@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: result-svc
+  labels:
+    name: result-service
+spec:
+  selector:
+    name: result-pod
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+      nodePort: 30111
+  type: NodePort

@@ -1,0 +1,9 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+- redis-depl.yaml
+- redis-svc.yaml
+
+commonLabels:
+  category: database-redis
