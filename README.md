@@ -21,7 +21,7 @@ The Voting App consists of the following components:
 Before you begin, ensure you have the following installed on your local machine:
 
 - A **Linux Machine** with `Docker` and `Kubernetes` installed.
-- With `Kustomize CLI installed` on your local machine.
+- With `Kustomize CLI installed` on your linux machine.
 
 ## Usage 🛠️
 
