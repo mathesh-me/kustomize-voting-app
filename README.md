@@ -35,7 +35,11 @@ git clone https://github.com/mathesh-me/kustomize-voting-app
 ```bash
 cd kustomize-voting-app
 ```
-3. Deploy the Voting App on your Kubernetes cluster using the following command:
+3. Create a namespace for the Voting App using the following command:
+```bash
+kubectl create namespace voteapp
+```
+4. Deploy the Voting App on your Kubernetes cluster using the following command:
 ```bash
 kubectl apply -k voting-app/
 ```
